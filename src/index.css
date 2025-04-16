@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+body {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-optical-sizing: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+}
+p {
+  line-height: 1.5;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/* ========================== custom classes ========================== */
+#container {
+  margin: 0 auto;
+  max-width: 1350px;
+  transition: 0.3s;
+  padding: 24px;
+  overflow-x: hidden !important;
+  position: relative;
+}
+/* visible and hidden elements */
+.is__visible {
+  display: block;
+}
+.is__hidden {
+  display: none;
+}
+.menu__visible {
+  right: 0;
+}
+.menu__hidden {
+  right: -350px;
+}
+/* ========================== SMALL SCREENS (<768px) ========================== */
+@media screen and (max-width: 768px) {
+  #container {
+    padding: 12px;
+  }
+}
+
+.main__container {
+  padding: 60px 0;
+  display: grid;
+  grid-template-columns: 15% 85%;
+}
+.filter__options {
+  /* max-width: 200px; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.filter__div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 15px;
+}
+.filter__box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+}
+.filter__box div {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+.filter__box input {
+  width: 12px;
+  border: 1px solid #999;
+}
+
+.filter__results {
+  padding-left: 40px;
+}
+
+.rightside__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

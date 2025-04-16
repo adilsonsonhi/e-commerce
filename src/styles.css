@@ -1,0 +1,39 @@
+/* ========================== HERO ========================== */
+.hero {
+  margin: 32px auto;
+  max-width: 1350px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+  border: 1px solid #ccc;
+}
+.hero-image {
+  width: 100%;
+}
+
+/* ========================== LATEST-COLLECTION ========================== */
+.latest-collection,
+.latest-collection-grid {
+  margin: 0 auto;
+  max-width: 1350px;
+}
+
+.latest-collection-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  gap: 24px;
+}
+.latest-collection img {
+  width: 100%;
+}
+
+.filter-options {
+  width: 500px;
+}
+.filter-div {
+  width: 100px;
+  height: 20px;
+  content: "";
+  background-color: red;
+}
