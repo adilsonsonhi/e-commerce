@@ -1,0 +1,26 @@
+.our__policy {
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 60px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+
+.our__policy div {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  border-radius: 6px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+}
+.our__policy img {
+  width: 60px;
+}
+.our__policy p {
+  color: #999;
+}

@@ -1,0 +1,22 @@
+/* ========================== HERO ========================== */
+.hero {
+  margin: 40px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  border: 1px solid #ccc;
+}
+.hero__description {
+  display: flex;
+  flex-direction: column;
+}
+.hero__img {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}

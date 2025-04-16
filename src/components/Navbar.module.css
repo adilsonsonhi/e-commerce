@@ -1,0 +1,194 @@
+:root {
+  --black-color: #000;
+  --bold-gray: #666;
+  --light-gray: #b6b6b6;
+  --white-color: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --overlay: rgba(0, 0, 0, 0.2);
+}
+/* ========================== HEADER ========================== */
+/* --- HEADER --- */
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+/* --- ACTION BTN --- */
+.action__btn {
+  padding: 4px;
+  width: 30px;
+  cursor: pointer;
+}
+/* --- LOGO --- */
+.nav__logo {
+  height: 40px;
+  color: var(--black-color);
+}
+/* --- NAV MENU --- */
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.nav__menu a {
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: var(--black-color);
+  font-weight: 500;
+  transition: color 0.3s ease-in-out; /* Animação de cor */
+}
+.nav__menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--black-color);
+  transition: width 0.3s ease-in-out;
+}
+.nav__menu a:hover::after,
+.nav__menu .active::after {
+  width: 100%;
+}
+.nav__menu a:hover {
+  color: var(--black-color); /* Mudança de cor no hover */
+}
+/* NAV BAR ACTIONS */
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/* profile-menu */
+.profile__menu {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.profile__dropdown {
+  position: absolute;
+  top: 24px;
+  right: 0;
+  display: none;
+  opacity: 0;
+  z-index: 10;
+  transition: opacity 0.3s ease-in-out; /* Transição suave */
+}
+.profile__menu:hover .profile__dropdown {
+  display: block;
+  opacity: 1;
+}
+.profile__content {
+  margin: 16px 0;
+  padding: 12px;
+  min-width: 220px;
+  background: var(--white-color);
+  box-shadow: 0 0px 40px var(--shadow-color);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+.profile__content li {
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  border-radius: 2px;
+}
+.profile__content li:hover {
+  background-color: var(--light-gray);
+}
+.profile__content li img {
+  width: 16px;
+}
+/* CART BUTTON */
+.cart__btn {
+  position: relative;
+}
+.cart__btn span {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: 0px;
+  right: -12px;
+  border-radius: 100%;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* ========================== MOBILE MENU ========================== */
+.overlay,
+.mobile__menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+.overlay {
+  content: "";
+  z-index: 9;
+  width: 100%;
+  background-color: var(--overlay);
+  cursor: pointer;
+}
+.mobile__menu {
+  width: 250px;
+  background-color: var(--white-color);
+  box-shadow: 0 0 40px var(--shadow-color);
+  transition: 0.3s ease-in-out;
+  z-index: 10;
+}
+.mobile__header {
+  cursor: pointer;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+  font-size: 20px;
+}
+.mobile__header img {
+  width: 24px;
+}
+.dropdown__icon {
+  width: 20px !important;
+  transform: rotate(180deg);
+}
+.mobile__content {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 12px;
+}
+.mobile__content a {
+  padding: 14px;
+  color: var(--bold-gray);
+  border-bottom: 1px solid var(--light-gray);
+  font-size: 20px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.mobile__content a:hover {
+  color: var(--black-color);
+}
+.mobile__menu .active {
+  color: var(--white-color) !important;
+  background-color: var(--black-color) !important;
+  border-radius: 4px;
+}
+/* ========================== SMALL SCREENS (<768px) ========================== */
+@media screen and (max-width: 768px) {
+  .nav__menu {
+    display: none;
+  }
+  .menu__button {
+    display: block !important;
+  }
+}

@@ -1,0 +1,9 @@
+.search__bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.search__bar img {
+  width: 24px;
+}

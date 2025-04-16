@@ -1,0 +1,20 @@
+img {
+  width: 100%;
+}
+.product__name {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1; /* Line Numbers */
+  height: auto;
+  transition: all 0.3s ease;
+}
+.product__price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+}
